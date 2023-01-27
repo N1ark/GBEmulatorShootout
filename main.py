@@ -63,12 +63,12 @@ def checkFilter(input, filter_data):
     input = str(input)
     for f in filter_data:
         if f.startswith("!"):
-            if f[1:] in input:
+            if f[1:] is input:
                 return False
         else:
-            if f not in input:
-                return False
-    return True
+            if f == input:
+                return True
+    return False
 
 
 if __name__ == "__main__":
