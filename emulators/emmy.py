@@ -6,7 +6,7 @@ import PIL.Image
 
 class Emmy(Emulator):
     def __init__(self):
-        super().__init__("Emmy", "https://emmy-gbc.vercel.app/", startup_time=0.5)
+        super().__init__("Emmy", "https://emmy-gbc.vercel.app/", startup_time=0.5, features=(PCM,))
 
     def setup(self):
         # download("http://problemkaputt.de/no$gmb.zip", "downloads/no$gmb.zip", fake_headers=True)
